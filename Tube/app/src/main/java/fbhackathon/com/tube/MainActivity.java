@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-// This code should be called to
-        Intent intent = new Intent(this, SoundReplayService.class);
-        intent.setData(Uri.parse("file://tubeapp/shotgun"));
-        this.startService(intent);
+        // This code should be called to
+        // Intent intent = new Intent(this, SoundReplayService.class);
+        // intent.setData(Uri.parse("file://tubeapp/shotgun"));
+        // this.startService(intent);
 
         FloatingActionButton record = (FloatingActionButton) findViewById(R.id.record);
         record.setOnClickListener(new View.OnClickListener() {
