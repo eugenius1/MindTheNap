@@ -1,6 +1,8 @@
 package fbhackathon.com.tube.MapData;
 
-public class Station {
+import java.io.Serializable;
+
+public class Station implements Serializable {
 
     private final String name;
 

@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import fbhackathon.com.tube.MapData.MapMaker;
 import fbhackathon.com.tube.SoundReplayService.SoundReplayService;
 
 public class MainActivity extends AppCompatActivity implements ServiceCallbacks {
@@ -70,8 +71,28 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
                                   }
 
         );
+
+
+        FloatingActionButton mapButton = (FloatingActionButton) findViewById(R.id.mapButton);
+        mapButton.setOnClickListener(new View.OnClickListener()
+
+                                     {
+                                         @Override
+                                         public void onClick(View view) {
+                                             goToJourneyPlanner();
+                                         }
+                                     }
+
+        );
+
+
+
     }
 
+    public void goToJourneyPlanner() {
+        Intent intent = new Intent(this, MapMaker.class);
+        startActivity(intent);
+    }
     private ServiceConnection connection = new ServiceConnection() {
 
         @Override

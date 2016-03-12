@@ -1,12 +1,15 @@
 package fbhackathon.com.tube.MapData;
 
+import android.os.Parcel;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class Line {
+public class Line implements Serializable {
 
     private final String name;
     private final List<Station> stations;
@@ -82,5 +85,13 @@ public class Line {
             sb.append(", ");
         }
         return sb.toString();
+    }
+
+    public boolean findDirection(Station start, Station end) {
+        if (stations.indexOf(start) > stations.indexOf(end)) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
