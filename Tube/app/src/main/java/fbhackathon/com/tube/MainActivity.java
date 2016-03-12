@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SoundReplayService svc = new SoundReplayService(this);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
