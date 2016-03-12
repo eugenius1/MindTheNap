@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import fbhackathon.com.tube.MapData.MapMaker;
 import fbhackathon.com.tube.SoundReplayService.SoundReplayService;
 
 public class MainActivity extends AppCompatActivity implements ServiceCallbacks {
@@ -59,8 +60,40 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
                                   }
 
         );
+
+        FloatingActionButton speechnew = (FloatingActionButton) findViewById(R.id.speechnew);
+        speechnew.setOnClickListener(new View.OnClickListener()
+
+                                  {
+                                      @Override
+                                      public void onClick(View view) {
+                                          openNewSpeechRecognizer();
+                                      }
+                                  }
+
+        );
+
+
+        FloatingActionButton mapButton = (FloatingActionButton) findViewById(R.id.mapButton);
+        mapButton.setOnClickListener(new View.OnClickListener()
+
+                                     {
+                                         @Override
+                                         public void onClick(View view) {
+                                             goToJourneyPlanner();
+                                         }
+                                     }
+
+        );
+
+
+
     }
 
+    public void goToJourneyPlanner() {
+        Intent intent = new Intent(this, MapMaker.class);
+        startActivity(intent);
+    }
     private ServiceConnection connection = new ServiceConnection() {
 
         @Override
@@ -93,6 +126,11 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
 
     public void openSpeechRecognizer() {
         Intent intent = new Intent(this, SpeechInputActivity.class);
+        startActivity(intent);
+    }
+
+    public void openNewSpeechRecognizer() {
+        Intent intent = new Intent(this, SpeechInputNewActivity.class);
         startActivity(intent);
     }
 
