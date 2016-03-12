@@ -35,10 +35,6 @@ public class SpeechInputActivity extends Activity {
         txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
         btnSpeak = (ImageButton) findViewById(R.id.btnSpeak);
 
-        // initialize all the station names
-        stationMap.put("bakerloo", true);
-        stationMap.put("paddington", true);
-
         btnSpeak.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -47,6 +43,16 @@ public class SpeechInputActivity extends Activity {
             }
         });
 
+    }
+
+    private void setupStationNames() {
+        // initialize all the station names
+        stationMap.put("acton", true);
+        stationMap.put("aldgate", true);
+        stationMap.put("aldgate", true);
+        stationMap.put("alperton", true);
+        stationMap.put("amersham", true);
+        stationMap.put("angel", true);
     }
 
     /**
