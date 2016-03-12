@@ -18,7 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service
+        <activity android:name=".AudioRecordTest" />
+        <activity android:name=".SpeechInputActivity" />
+    </application>
+    <service
             android:name=".SoundReplayService.SoundReplayService"
             android:exported="false"></service>
         <service
@@ -28,5 +31,6 @@
     </application>
 
     <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 </manifest>

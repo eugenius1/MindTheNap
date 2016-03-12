@@ -1,11 +1,15 @@
 package fbhackathon.com.tube;
 
+<<<<<<< HEAD
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+=======
+import android.content.Intent;
+>>>>>>> andy
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.design.widget.FloatingActionButton;
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+<<<<<<< HEAD
         // This code should be called to
         Intent intent = new Intent(this,SoundReplayService.class);
         intent.setData(Uri.parse("file://tubeapp/shotgun"));
@@ -38,10 +43,22 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
+=======
+        FloatingActionButton record = (FloatingActionButton) findViewById(R.id.record);
+        record.setOnClickListener(new View.OnClickListener() {
+>>>>>>> andy
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                openAudioRecording();
+
+            }
+        });
+
+        FloatingActionButton speech = (FloatingActionButton) findViewById(R.id.speech);
+        speech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSpeechRecognizer();
             }
         });
     }
@@ -72,6 +89,16 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
     public void onAccelerometerValueChange(double magnitude) {
         TextView textView = (TextView) findViewById(R.id.Magnitude);
         textView.setText(String.valueOf(magnitude));
+    }
+
+    public void openAudioRecording() {
+        Intent intent = new Intent(this, AudioRecordTest.class);
+        startActivity(intent);
+    }
+
+    public void openSpeechRecognizer() {
+        Intent intent = new Intent(this, SpeechInputActivity.class);
+        startActivity(intent);
     }
 
     @Override
