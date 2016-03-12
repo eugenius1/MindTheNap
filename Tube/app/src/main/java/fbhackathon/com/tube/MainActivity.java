@@ -15,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import fbhackathon.com.tube.MapData.MapMaker;
+
 public class MainActivity extends AppCompatActivity implements ServiceCallbacks {
 
     private boolean bound;
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Intent intent = new Intent (MainActivity.this, MapMaker.class);
+                startActivity(intent);
             }
         });
     }

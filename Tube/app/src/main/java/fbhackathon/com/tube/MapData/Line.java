@@ -1,5 +1,8 @@
 package fbhackathon.com.tube.MapData;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -13,6 +16,14 @@ public class Line {
         this.stations = stations;
     }
 
+    public List<String> getAllStationNames() {
+        List<String> stationNames = new ArrayList<>();
+        for (Station s : stations) {
+            stationNames.add(s.getName());
+        }
+        return stationNames;
+    }
+
     public Station findStation(String name) throws NoSuchElementException {
         for (Station s : stations) {
             if (s.getName().equals(name)) {
@@ -20,6 +31,10 @@ public class Line {
             }
         }
         throw new NoSuchElementException();
+    }
+
+    public String getName() {
+        return name;
     }
 
     public Station getNext(Station station, boolean direction)

@@ -1,25 +1,73 @@
 package fbhackathon.com.tube.MapData;
 
 
+import android.app.Activity;
+import android.os.Bundle;
 import android.util.Xml;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
-public class MapMaker {
+import fbhackathon.com.tube.R;
+
+public class MapMaker extends Activity {
 
     static TubeMap londonMap;
+    private Spinner lineSelector;
+    private Spinner startStationSelector;
+    private Spinner endStationSelector;
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_mapmaker);
+
+        lineSelector = (Spinner) findViewById(R.id.line_selector);
+        startStationSelector = (Spinner) findViewById(R.id.start_station_selector);
+        endStationSelector = (Spinner) findViewById(R.id.end_station_selector);
+        try {
+            londonMap = parse(getResources().openRawResource(R.raw.victoria));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        final List<String> lineNames = londonMap.getAllLineNames();
+        startStationSelector.setClickable(false);
+        endStationSelector.setClickable(false);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, lineNames);
+        lineSelector.setAdapter(adapter);
+        lineSelector.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Line line = londonMap.getLine(lineNames.get(position));
+                List<String> stationNames = line.getAllStationNames();
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(MapMaker.this, R.layout.support_simple_spinner_dropdown_item, stationNames);
+                startStationSelector.setClickable(true);
+                endStationSelector.setClickable(true);
+                startStationSelector.setAdapter(adapter);
+                endStationSelector.setAdapter(adapter);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                startStationSelector.setClickable(false);
+                endStationSelector.setClickable(false);
+            }
+        });
+    }
+
 
     public static TubeMap parse(InputStream in) throws XmlPullParserException, IOException {
         try {
