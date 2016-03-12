@@ -1,5 +1,8 @@
 package fbhackathon.com.tube;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import fbhackathon.com.tube.SoundReplayService.SoundReplayService;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +23,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        // This code should be called to
+        Intent intent = new Intent(this,SoundReplayService.class);
+        intent.setData(Uri.parse("file://tubeapp/shotgun"));
+        this.startService(intent);
+
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
