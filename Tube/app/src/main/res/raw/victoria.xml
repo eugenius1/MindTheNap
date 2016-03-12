@@ -90,7 +90,7 @@
 			<name>Euston Square</name>
 		</station>
 		<station>
-			<name>King&apos; Cross St. Pancras</name>
+			<name>King&apos;s Cross St. Pancras</name>
 		</station>
 		<station>
 			<name>Farrington</name>
@@ -162,4 +162,575 @@
 			<name>Edgware Road</name>
 		</station>
 	</line>
+	<line>
+		<name>Northern (Morden - Edgware via Bank)</name>
+		<station>
+			<name>Morden</name>
+		</station>
+		<station>
+			<name>South Wimbledon</name>
+		</station>
+		<station>
+			<name>Colliers Wood</name>
+		</station>
+		<station>
+			<name>Tooting Broadway</name>
+		</station>
+		<station>
+			<name>Tooting Bec</name>
+		</station>
+		<station>
+			<name>Balham</name>
+		</station>
+		<station>
+			<name>Clapham South</name>
+		</station>
+		<station>
+			<name>Clapham Common</name>
+		</station>
+		<station>
+			<name>Clapham North</name>
+		</station>
+		<station>
+			<name>Stockwell</name>
+		</station>
+		<station>
+			<name>Oval</name>
+		</station>
+		<station>
+			<name>Kennington</name>
+		</station>
+		<station>
+			<name>Elephant &amp; Castle</name>
+		</station>
+		<station>
+			<name>Borough</name>
+		</station>
+		<station>
+			<name>London Bridge</name>
+		</station>
+		<station>
+			<name>Bank</name>
+		</station>
+		<station>
+			<name>Moorgate</name>
+		</station>
+		<station>
+			<name>Old Street</name>
+		</station>
+		<station>
+			<name>Angel</name>
+		</station>
+		<station>
+			<name>King&apos;s Cross St. Pancras</name>
+		</station>
+		<station>
+			<name>Euston</name>
+		</station>
+		<station>
+			<name>Camden Town</name>
+		</station>
+		<station>
+			<name>Chalk Farm</name>
+		</station>
+		<station>
+			<name>Belsize Park</name>
+		</station>
+		<station>
+			<name>Hampstead</name>
+		</station>
+		<station>
+			<name>Golders Green</name>
+		</station>
+		<station>
+			<name>Brent Cross</name>
+		</station>
+		<station>
+			<name>Hendon Central</name>
+		</station>
+		<station>
+			<name>Colindale</name>
+		</station>
+		<station>
+			<name>Brunt Oak</name>
+		</station>
+		<station>
+			<name>Edgware</name>
+		</station>
+	</line>
+	<line>
+		<name> Northern (Morden - Mill Hill East via Bank)</name>
+		<station>
+			<name>Morden</name>
+		</station>
+		<station>
+			<name>South Wimbledon</name>
+		</station>
+		<station>
+			<name>Colliers Wood</name>
+		</station>
+		<station>
+			<name>Tooting Broadway</name>
+		</station>
+		<station>
+			<name>Tooting Bec</name>
+		</station>
+		<station>
+			<name>Balham</name>
+		</station>
+		<station>
+			<name>Clapham South</name>
+		</station>
+		<station>
+			<name>Clapham Common</name>
+		</station>
+		<station>
+			<name>Clapham North</name>
+		</station>
+		<station>
+			<name>Stockwell</name>
+		</station>
+		<station>
+			<name>Oval</name>
+		</station>
+		<station>
+			<name>Kennington</name>
+		</station>
+		<station>
+			<name>Elephant &amp; Castle</name>
+		</station>
+		<station>
+			<name>Borough</name>
+		</station>
+		<station>
+			<name>London Bridge</name>
+		</station>
+		<station>
+			<name>Bank</name>
+		</station>
+		<station>
+			<name>Moorgate</name>
+		</station>
+		<station>
+			<name>Old Street</name>
+		</station>
+		<station>
+			<name>Angel</name>
+		</station>
+		<station>
+			<name>King&apos;s Cross St. Pancras</name>
+		</station>
+		<station>
+			<name>Euston</name>
+		</station>
+		<station>
+			<name>Camden Town</name>
+		</station>
+		<station>
+			<name>Kentish</name>
+		</station>
+		<station>
+			<name>Tufnell Park</name>
+		</station>
+		<station>
+			<name>Archway</name>
+		</station>
+		<station>
+			<name>Highgate</name>
+		</station>
+		<station>
+			<name>East Finchley</name>
+		</station>
+		<station>
+			<name>Finchley Central</name>
+		</station>
+		<station>
+			<name>Mill Hill East</name>
+		</station>
+	</line>
+	<line>
+		<name> Northern (Morden - High Barnet via Bank)</name>
+		<station>
+			<name>Morden</name>
+		</station>
+		<station>
+			<name>South Wimbledon</name>
+		</station>
+		<station>
+			<name>Colliers Wood</name>
+		</station>
+		<station>
+			<name>Tooting Broadway</name>
+		</station>
+		<station>
+			<name>Tooting Bec</name>
+		</station>
+		<station>
+			<name>Balham</name>
+		</station>
+		<station>
+			<name>Clapham South</name>
+		</station>
+		<station>
+			<name>Clapham Common</name>
+		</station>
+		<station>
+			<name>Clapham North</name>
+		</station>
+		<station>
+			<name>Stockwell</name>
+		</station>
+		<station>
+			<name>Oval</name>
+		</station>
+		<station>
+			<name>Kennington</name>
+		</station>
+		<station>
+			<name>Elephant &amp; Castle</name>
+		</station>
+		<station>
+			<name>Borough</name>
+		</station>
+		<station>
+			<name>London Bridge</name>
+		</station>
+		<station>
+			<name>Bank</name>
+		</station>
+		<station>
+			<name>Moorgate</name>
+		</station>
+		<station>
+			<name>Old Street</name>
+		</station>
+		<station>
+			<name>Angel</name>
+		</station>
+		<station>
+			<name>King&apos;s Cross St. Pancras</name>
+		</station>
+		<station>
+			<name>Euston</name>
+		</station>
+		<station>
+			<name>Camden Town</name>
+		</station>
+		<station>
+			<name>Kentish</name>
+		</station>
+		<station>
+			<name>Tufnell Park</name>
+		</station>
+		<station>
+			<name>Archway</name>
+		</station>
+		<station>
+			<name>Highgate</name>
+		</station>
+		<station>
+			<name>East Finchley</name>
+		</station>
+		<station>
+			<name>Finchley Central</name>
+		</station>
+		<station>
+			<name>West Finchley</name>
+		</station>
+		<station>
+			<name>Woodside Park</name>
+		</station>
+		<station>
+			<name>Totteridge &amp; Whetstone</name>
+		</station>
+		<station>
+			<name>High Barnet</name>
+		</station>
+	</line>
+	<line>
+		<name>Northern (Morden - Edgware via Charing Cross)</name>
+		<station>
+			<name>Morden</name>
+		</station>
+		<station>
+			<name>South Wimbledon</name>
+		</station>
+		<station>
+			<name>Colliers Wood</name>
+		</station>
+		<station>
+			<name>Tooting Broadway</name>
+		</station>
+		<station>
+			<name>Tooting Bec</name>
+		</station>
+		<station>
+			<name>Balham</name>
+		</station>
+		<station>
+			<name>Clapham South</name>
+		</station>
+		<station>
+			<name>Clapham Common</name>
+		</station>
+		<station>
+			<name>Clapham North</name>
+		</station>
+		<station>
+			<name>Stockwell</name>
+		</station>
+		<station>
+			<name>Oval</name>
+		</station>
+		<station>
+			<name>Kennington</name>
+		</station>
+		<station>
+			<name>Waterloo</name>
+		</station>
+		<station>
+			<name>Embankment</name>
+		</station>
+		<station>
+			<name>Charing Cross</name>
+		</station>
+		<station>
+			<name>Leicester Square</name>
+		</station>
+		<station>
+			<name>Tottenham Court Road</name>
+		</station>
+		<station>
+			<name>Goodge Street</name>
+		</station>
+		<station>
+			<name>Warren Street</name>
+		</station>
+		<station>
+			<name>Euston</name>
+		</station>
+		<station>
+			<name>Mornington Crescent</name>
+		</station>
+		<station>
+			<name>Camden Town</name>
+		</station>
+		<station>
+			<name>Chalk Farm</name>
+		</station>
+		<station>
+			<name>Belsize Park</name>
+		</station>
+		<station>
+			<name>Hampstead</name>
+		</station>
+		<station>
+			<name>Golders Green</name>
+		</station>
+		<station>
+			<name>Brent Cross</name>
+		</station>
+		<station>
+			<name>Hendon Central</name>
+		</station>
+		<station>
+			<name>Colindale</name>
+		</station>
+		<station>
+			<name>Brunt Oak</name>
+		</station>
+		<station>
+			<name>Edgware</name>
+		</station>
+	</line>
+	<line>
+		<name> Northern (Morden - Mill Hill East via Charing Cross)</name>
+		<station>
+			<name>Morden</name>
+		</station>
+		<station>
+			<name>South Wimbledon</name>
+		</station>
+		<station>
+			<name>Colliers Wood</name>
+		</station>
+		<station>
+			<name>Tooting Broadway</name>
+		</station>
+		<station>
+			<name>Tooting Bec</name>
+		</station>
+		<station>
+			<name>Balham</name>
+		</station>
+		<station>
+			<name>Clapham South</name>
+		</station>
+		<station>
+			<name>Clapham Common</name>
+		</station>
+		<station>
+			<name>Clapham North</name>
+		</station>
+		<station>
+			<name>Stockwell</name>
+		</station>
+		<station>
+			<name>Oval</name>
+		</station>
+		<station>
+			<name>Kennington</name>
+		</station>
+		<station>
+			<name>Waterloo</name>
+		</station>
+		<station>
+			<name>Embankment</name>
+		</station>
+		<station>
+			<name>Charing Cross</name>
+		</station>
+		<station>
+			<name>Leicester Square</name>
+		</station>
+		<station>
+			<name>Tottenham Court Road</name>
+		</station>
+		<station>
+			<name>Goodge Street</name>
+		</station>
+		<station>
+			<name>Warren Street</name>
+		</station>
+		<station>
+			<name>Euston</name>
+		</station>
+		<station>
+			<name>Mornington Crescent</name>
+		</station>
+		<station>
+			<name>Camden Town</name>
+		</station>
+		<station>
+			<name>Kentish</name>
+		</station>
+		<station>
+			<name>Tufnell Park</name>
+		</station>
+		<station>
+			<name>Archway</name>
+		</station>
+		<station>
+			<name>Highgate</name>
+		</station>
+		<station>
+			<name>East Finchley</name>
+		</station>
+		<station>
+			<name>Finchley Central</name>
+		</station>
+		<station>
+			<name>Mill Hill East</name>
+		</station>
+	</line>
+	<line>
+		<name> Northern (Morden - High Barnet via Charring Cross)</name>
+		<station>
+			<name>Morden</name>
+		</station>
+		<station>
+			<name>South Wimbledon</name>
+		</station>
+		<station>
+			<name>Colliers Wood</name>
+		</station>
+		<station>
+			<name>Tooting Broadway</name>
+		</station>
+		<station>
+			<name>Tooting Bec</name>
+		</station>
+		<station>
+			<name>Balham</name>
+		</station>
+		<station>
+			<name>Clapham South</name>
+		</station>
+		<station>
+			<name>Clapham Common</name>
+		</station>
+		<station>
+			<name>Clapham North</name>
+		</station>
+		<station>
+			<name>Stockwell</name>
+		</station>
+		<station>
+			<name>Oval</name>
+		</station>
+		<station>
+			<name>Kennington</name>
+		</station>
+		<station>
+			<name>Waterloo</name>
+		</station>
+		<station>
+			<name>Embankment</name>
+		</station>
+		<station>
+			<name>Charing Cross</name>
+		</station>
+		<station>
+			<name>Leicester Square</name>
+		</station>
+		<station>
+			<name>Tottenham Court Road</name>
+		</station>
+		<station>
+			<name>Goodge Street</name>
+		</station>
+		<station>
+			<name>Warren Street</name>
+		</station>
+		<station>
+			<name>Euston</name>
+		</station>
+		<station>
+			<name>Mornington Crescent</name>
+		</station>
+		<station>
+			<name>Camden Town</name>
+		</station>
+		<station>
+			<name>Kentish</name>
+		</station>
+		<station>
+			<name>Tufnell Park</name>
+		</station>
+		<station>
+			<name>Archway</name>
+		</station>
+		<station>
+			<name>Highgate</name>
+		</station>
+		<station>
+			<name>East Finchley</name>
+		</station>
+		<station>
+			<name>Finchley Central</name>
+		</station>
+		<station>
+			<name>West Finchley</name>
+		</station>
+		<station>
+			<name>Woodside Park</name>
+		</station>
+		<station>
+			<name>Totteridge &amp; Whetstone</name>
+		</station>
+		<station>
+			<name>High Barnet</name>
+		</station>
+	</line>
+
 </tubeMap>
