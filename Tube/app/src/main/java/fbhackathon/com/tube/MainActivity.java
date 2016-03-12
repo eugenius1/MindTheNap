@@ -1,5 +1,8 @@
 package fbhackathon.com.tube;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -15,7 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import fbhackathon.com.tube.MapData.MapMaker;
+import fbhackathon.com.tube.SoundReplayService.SoundReplayService;
 
 public class MainActivity extends AppCompatActivity implements ServiceCallbacks {
 
@@ -28,19 +31,36 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        // This code should be called to
+        // Intent intent = new Intent(this, SoundReplayService.class);
+        // intent.setData(Uri.parse("file://tubeapp/shotgun"));
+        // this.startService(intent);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                Intent intent = new Intent (MainActivity.this, MapMaker.class);
-                startActivity(intent);
-            }
-        });
+        FloatingActionButton record = (FloatingActionButton) findViewById(R.id.record);
+        record.setOnClickListener(new View.OnClickListener() {
+                                      @Override
+                                      public void onClick(View view) {
+                                          openAudioRecording();
+
+                                      }
+                                  }
+
+        );
+
+        FloatingActionButton speech = (FloatingActionButton) findViewById(R.id.speech);
+        speech.setOnClickListener(new View.OnClickListener()
+
+                                  {
+                                      @Override
+                                      public void onClick(View view) {
+                                          openSpeechRecognizer();
+                                      }
+                                  }
+
+        );
     }
-    private ServiceConnection connection = new ServiceConnection(){
+
+    private ServiceConnection connection = new ServiceConnection() {
 
         @Override
         public void onServiceConnected(ComponentName className,
@@ -56,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
             bound = false;
         }
     };
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -64,9 +85,14 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
         bindService(intent, connection, Context.BIND_AUTO_CREATE);
     }
 
-    public void onAccelerometerValueChange(double magnitude) {
-        TextView textView = (TextView) findViewById(R.id.Magnitude);
-        textView.setText(String.valueOf(magnitude));
+    public void openAudioRecording() {
+        Intent intent = new Intent(this, AudioRecordTest.class);
+        startActivity(intent);
+    }
+
+    public void openSpeechRecognizer() {
+        Intent intent = new Intent(this, SpeechInputActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -102,6 +128,6 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
 
     @Override
     public void changeText(double magnitude) {
-        onAccelerometerValueChange(magnitude);
+
     }
 }

@@ -19,7 +19,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".MapData.MapMaker"></activity>
-
+        <activity android:name=".AudioRecordTest" />
+        <activity android:name=".SpeechInputActivity" />
+    <service
+            android:name=".SoundReplayService.SoundReplayService"
+            android:exported="false"></service>
         <service
             android:name=".Accelerometer"
             android:enabled="true"
@@ -27,5 +31,6 @@
     </application>
 
     <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 </manifest>
