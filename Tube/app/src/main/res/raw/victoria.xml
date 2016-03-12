@@ -51,4 +51,115 @@
 			<name>Walthamstow Central</name>
 		</station>
 	</line>
+	<line>
+		<name>Circle</name>
+		<station>
+			<name>Hammersmith</name>
+		</station>
+		<station>
+			<name>Goldhawk</name>
+		</station>
+		<station>
+			<name>Shepherd&apos;s Bush Market</name>
+		</station>
+		<station>
+			<name>Wood Lane</name>
+		</station>
+		<station>
+			<name>Latimer Road</name>
+		</station>
+		<station>
+			<name>Ladbroke Road</name>
+		</station>
+		<station>
+			<name>Westbourne Park</name>
+		</station>
+		<station>
+			<name>Royal Oak</name>
+		</station>
+		<station>
+			<name>Paddington</name>
+		</station>
+		<station>
+			<name>Baker Street</name>
+		</station>
+		<station>
+			<name>Great Portland Street</name>
+		</station>
+		<station>
+			<name>Euston Square</name>
+		</station>
+		<station>
+			<name>King&apos; Cross St. Pancras</name>
+		</station>
+		<station>
+			<name>Farrington</name>
+		</station>
+		<station>
+			<name>Barbican</name>
+		</station>
+		<station>
+			<name>Moorgate</name>
+		</station>
+		<station>
+			<name>Liverpool Street</name>
+		</station>
+		<station>
+			<name>Aldgate</name>
+		</station>
+		<station>
+			<name>Tower Hill</name>
+		</station>
+		<station>
+			<name>Monument</name>
+		</station>
+		<station>
+			<name>Cannon Street</name>
+		</station>
+		<station>
+			<name>Mansion House</name>
+		</station>
+		<station>
+			<name>Blackfriars</name>
+		</station>
+		<station>
+			<name>Temple</name>
+		</station>
+		<station>
+			<name>Embankment</name>
+		</station>
+		<station>
+			<name>Westminster</name>
+		</station>
+		<station>
+			<name>St. James&apos;s Park</name>
+		</station>
+		<station>
+			<name>Victoria</name>
+		</station>
+		<station>
+			<name>Sloane Square</name>
+		</station>
+		<station>
+			<name>South Kensington</name>
+		</station>
+		<station>
+			<name>Gloucester Road</name>
+		</station>
+		<station>
+			<name>High Street Kensington</name>
+		</station>
+		<station>
+			<name>Notting Hill Gate</name>
+		</station>
+		<station>
+			<name>Bayswater</name>
+		</station>
+		<station>
+			<name>Paddington</name>
+		</station>
+		<station>
+			<name>Edgware Road</name>
+		</station>
+	</line>
 </tubeMap>
