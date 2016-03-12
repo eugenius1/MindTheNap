@@ -2,6 +2,7 @@ package fbhackathon.com.tube;
 
 import java.util.ArrayList;
 
+import android.net.Uri;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
@@ -16,9 +17,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import fbhackathon.com.tube.SoundReplayService.SoundReplayService;
+
 /**
  * Created by Chaiyong on 3/12/16.
  */
+
 public class SpeechInputNewActivity extends Activity implements
         RecognitionListener {
     private TextView returnedText;
@@ -41,9 +45,10 @@ public class SpeechInputNewActivity extends Activity implements
         speech.setRecognitionListener(this);
         recognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         recognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_PREFERENCE, "en");
-        // recognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-UK");
+        recognizerIntent.putExtra(RecognizerIntent.EXTRA_PREFER_OFFLINE, Boolean.TRUE);
+        recognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-UK");
         recognizerIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, this.getPackageName());
-        recognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_WEB_SEARCH);
+        recognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         recognizerIntent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 3);
 
         toggleButton.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -128,8 +133,22 @@ public class SpeechInputNewActivity extends Activity implements
         ArrayList<String> matches = results
                 .getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
         String text = "";
-        for (String result : matches)
-            text += result + "\n";
+        for (String result : matches) {
+
+            System.out.println("tubeapp: split = " + result.toLowerCase());
+            FuzzyStringMatcher fuzzyMatcher = new FuzzyStringMatcher(this.getApplicationContext());
+            String bestMatch = fuzzyMatcher.findBestMatch(result.toLowerCase());
+            // if (stationMap.get(splitText[i].toLowerCase())!=null) {
+            if (!bestMatch.equals("not_found")) {
+                System.out.println("tubeapp: found in map");
+                Intent intent = new Intent(this, SoundReplayService.class);
+                intent.setData(Uri.parse("file://tubeapp/shotgun.mp3"));
+                this.startService(intent);
+                text += "match: " + result + "\n";
+            } else {
+                text += result + "\n";
+            }
+        }
 
         returnedText.setText(text);
     }

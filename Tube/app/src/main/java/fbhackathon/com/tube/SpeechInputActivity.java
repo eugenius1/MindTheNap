@@ -16,6 +16,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.apache.commons.codec.EncoderException;
+import org.apache.commons.codec.language.Soundex;
+
 import fbhackathon.com.tube.SoundReplayService.SoundReplayService;
 
 /**
@@ -29,6 +32,7 @@ public class SpeechInputActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.speech_recognition);
 
@@ -45,6 +49,7 @@ public class SpeechInputActivity extends Activity {
 
     }
 
+
     private void setupStationNames() {
         // initialize all the station names
         stationMap.put("acton", true);
@@ -57,7 +62,7 @@ public class SpeechInputActivity extends Activity {
 
     /**
      * Showing google speech input dialog
-     * */
+     */
     private void promptSpeechInput() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
@@ -76,7 +81,7 @@ public class SpeechInputActivity extends Activity {
 
     /**
      * Receiving speech input
-     * */
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -90,14 +95,17 @@ public class SpeechInputActivity extends Activity {
                     System.out.println("tubeapp: announcement = " + announcement);
                     String[] splitText = announcement.split("\\s");
                     System.out.println("tubeapp: split size = " + splitText.length);
-                    for (int i=0; i<splitText.length; i++) {
+                    for (int i = 0; i < splitText.length; i++) {
                         System.out.println("tubeapp: split = " + splitText[i].toLowerCase());
-                       if (stationMap.get(splitText[i].toLowerCase())!=null) {
-                           System.out.println("tubeapp: found in map");
-                           Intent intent = new Intent(this, SoundReplayService.class);
-                           intent.setData(Uri.parse("file://tubeapp/shotgun.mp3"));
-                           this.startService(intent);
-                       }
+                        FuzzyStringMatcher fuzzyMatcher = new FuzzyStringMatcher(this.getApplicationContext());
+                        String bestMatch = fuzzyMatcher.findBestMatch(splitText[i].toLowerCase());
+                        // if (stationMap.get(splitText[i].toLowerCase())!=null) {
+                        if (!bestMatch.equals("not_found")) {
+                            System.out.println("tubeapp: found in map");
+                            Intent intent = new Intent(this, SoundReplayService.class);
+                            intent.setData(Uri.parse("file://tubeapp/shotgun.mp3"));
+                            this.startService(intent);
+                        }
                     }
                 }
                 break;
