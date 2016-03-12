@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -101,13 +102,15 @@ public class MapMaker extends Activity {
             @Override
             public void onClick(View v) {
                 if (startStation.equals(endStation)) {
-                    throw new RuntimeException("TODO: Handle this!");
+                    // throw new RuntimeException("TODO: Handle this!");
+                    Toast.makeText(MapMaker.this, "Start and stop cannot be the same!", Toast.LENGTH_SHORT);
+                } else {
+                    Intent intent = new Intent(MapMaker.this, OnJourney.class);
+                    intent.putExtra("line", line);
+                    intent.putExtra("start", startStation);
+                    intent.putExtra("end", endStation);
+                    startActivity(intent);
                 }
-                Intent intent = new Intent(MapMaker.this, OnJourney.class);
-                intent.putExtra("line", line);
-                intent.putExtra("start", startStation);
-                intent.putExtra("end", endStation);
-                startActivity(intent);
             }
         });
 

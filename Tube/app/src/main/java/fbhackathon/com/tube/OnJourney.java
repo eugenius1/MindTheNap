@@ -1,8 +1,11 @@
 package fbhackathon.com.tube;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -12,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fbhackathon.com.tube.MapData.Line;
+import fbhackathon.com.tube.MapData.MapMaker;
 import fbhackathon.com.tube.MapData.Station;
 
 public class OnJourney extends AppCompatActivity {
@@ -22,6 +26,7 @@ public class OnJourney extends AppCompatActivity {
     private TextView currentTextView;
     private TextView destinationTextView;
     private ListView stopsListView;
+    private Button startJourneyButton;
     private boolean direction;
     private List<String> stops = new ArrayList<>();
 
@@ -35,10 +40,23 @@ public class OnJourney extends AppCompatActivity {
         currentTextView = (TextView) findViewById(R.id.current_station);
         destinationTextView = (TextView) findViewById(R.id.end_station);
         stopsListView = (ListView) findViewById(R.id.remaining_stations);
+        startJourneyButton = (Button) findViewById(R.id.start_journey_button);
+
         currentTextView.setText(current.getName());
         destinationTextView.setText(destination.getName());
         direction = line.findDirection(current, destination);
         makeListOfStops();
+
+        startJourneyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(OnJourney.this, SpeechInputNewActivity.class);
+                String[] stopsArr = (String[]) stops.toArray();
+                intent.putExtra("stops", stopsArr);
+                startActivity(intent);
+            }
+        }
+        );
     }
 
     private void makeListOfStops() {
