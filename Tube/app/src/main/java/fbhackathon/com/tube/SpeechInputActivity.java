@@ -32,11 +32,7 @@ public class SpeechInputActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-<<<<<<< HEAD
         SoundReplayService svc = new SoundReplayService(this);
-=======
-
->>>>>>> 4fc59546e2fc3a5731a237aaeaf2b2ce7d676f56
         super.onCreate(savedInstanceState);
         setContentView(R.layout.speech_recognition);
         setupStationNames();
@@ -73,11 +69,7 @@ public class SpeechInputActivity extends Activity {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-<<<<<<< HEAD
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
-=======
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-UK");
->>>>>>> 4fc59546e2fc3a5731a237aaeaf2b2ce7d676f56
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
                 getString(R.string.speech_prompt));
         try {
