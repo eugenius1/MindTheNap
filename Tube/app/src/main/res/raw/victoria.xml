@@ -1,0 +1,54 @@
+<tubeMap>
+	<name>London</name>
+	<line>
+		<name>Victoria</name>
+		<station>
+			<name>Brixton</name>
+		</station>
+		<station>
+			<name>Stockwell</name>
+		</station>
+		<station>
+			<name>Vauxhall</name>
+		</station>
+		<station>
+			<name>Pimlico</name>
+		</station>
+		<station>
+			<name>Victoria</name>
+		</station>
+		<station>
+			<name>Green Park</name>
+		</station>
+		<station>
+			<name>Oxford Circus</name>
+		</station>
+		<station>
+			<name>Warren Street</name>
+		</station>
+		<station>
+			<name>Euston</name>
+		</station>
+		<station>
+			<name>King&apos;s Cross St. Pancras</name>
+		</station>
+		<station>
+			<name>Highbury &amp; Islington</name>
+		</station>
+		<station>
+			<name>Finsbury Park</name>
+		</station>
+		<station>
+			<name>Seven Sisters</name>
+		</station>
+		<station>
+			<name>Tottenham Hale</name>
+		</station>
+		<station>
+			<name>Blackhorse Road</name>
+		</station>
+		<station>
+			<name>Walthamstow Central</name>
+		</station>
+	</line>
+</tubeMap>
