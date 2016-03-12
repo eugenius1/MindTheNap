@@ -57,7 +57,7 @@ public class Accelerometer extends Service implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         Sensor mySensor = event.sensor;
-        System.out.println(1);
+        //System.out.println(1);
         if (mySensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
             magnitude = findMagnitude(event.values);
             if (serviceCallbacks != null) {
