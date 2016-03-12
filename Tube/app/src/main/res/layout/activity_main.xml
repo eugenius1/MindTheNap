@@ -36,17 +36,17 @@
         android:id="@+id/speechnew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
+        android:layout_gravity="bottom|right"
         android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_btn_speak_now" />
 
-    <android.support.design.widget.FloatingActionButton
+    <!--android.support.design.widget.FloatingActionButton
         android:id="@+id/speech"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_btn_speak_now" />
+        android:src="@android:drawable/ic_btn_speak_now" /-->
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/mapButton"

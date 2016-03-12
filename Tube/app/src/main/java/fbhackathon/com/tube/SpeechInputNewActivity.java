@@ -17,6 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import fbhackathon.com.tube.MapData.Line;
 import fbhackathon.com.tube.SoundReplayService.SoundReplayService;
 
 /**
@@ -31,6 +32,7 @@ public class SpeechInputNewActivity extends Activity implements
     private SpeechRecognizer speech = null;
     private Intent recognizerIntent;
     private String LOG_TAG = "SpeechInputNewActivity";
+    private String[] stops;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,9 @@ public class SpeechInputNewActivity extends Activity implements
         recognizerIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, this.getPackageName());
         recognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         recognizerIntent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 3);
+
+        // get the stops
+        stops = getIntent().getExtras().getStringArray("stops");
 
         toggleButton.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
@@ -136,7 +141,7 @@ public class SpeechInputNewActivity extends Activity implements
         for (String result : matches) {
 
             System.out.println("tubeapp: split = " + result.toLowerCase());
-            FuzzyStringMatcher fuzzyMatcher = new FuzzyStringMatcher(this.getApplicationContext());
+            FuzzyStringMatcher fuzzyMatcher = new FuzzyStringMatcher(this.getApplicationContext(), stops);
             String bestMatch = fuzzyMatcher.findBestMatch(result.toLowerCase());
             // if (stationMap.get(splitText[i].toLowerCase())!=null) {
             if (!bestMatch.equals("not_found")) {
@@ -144,7 +149,7 @@ public class SpeechInputNewActivity extends Activity implements
                 Intent intent = new Intent(this, SoundReplayService.class);
                 intent.setData(Uri.parse("file://tubeapp/shotgun.mp3"));
                 this.startService(intent);
-                text += "match: " + result + "\n";
+                text += "match: " + result + ":" + bestMatch + "\n";
             } else {
                 text += result + "\n";
             }

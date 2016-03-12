@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
 
         );
 
-        FloatingActionButton speech = (FloatingActionButton) findViewById(R.id.speech);
+        /*FloatingActionButton speech = (FloatingActionButton) findViewById(R.id.speech);
         speech.setOnClickListener(new View.OnClickListener()
 
                                   {
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
                                       }
                                   }
 
-        );
+        );*/
 
         FloatingActionButton speechnew = (FloatingActionButton) findViewById(R.id.speechnew);
         speechnew.setOnClickListener(new View.OnClickListener()

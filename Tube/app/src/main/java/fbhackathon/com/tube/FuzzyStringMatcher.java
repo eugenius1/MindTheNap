@@ -18,12 +18,12 @@ import fbhackathon.com.tube.MapData.TubeMap;
  */
 public class FuzzyStringMatcher {
 
-    private List<String> stations = new ArrayList<String>();
+    private String[] stations;
     private MapMaker mapMaker = new MapMaker();
     private TubeMap tubeMap;
 
-    public FuzzyStringMatcher(Context context) {
-        try {
+    public FuzzyStringMatcher(Context context, String[] stations) {
+       /* try {
             tubeMap = mapMaker.parse(context.getResources().openRawResource(R.raw.victoria));
             List<String> lineNames = tubeMap.getAllLineNames();
             for (int i=0; i<lineNames.size(); i++) {
@@ -32,7 +32,8 @@ public class FuzzyStringMatcher {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
+        this.stations = stations;
     }
 
     private int checkSoundexDifference(String s1, String s2) {
@@ -49,12 +50,12 @@ public class FuzzyStringMatcher {
     public String findBestMatch(String s1) {
         int max = 0;
         String bestMatch = "";
-        for (int i = 0; i < stations.size(); i++) {
-            Log.d("stations", stations.get(i));
-            int diff = checkSoundexDifference(s1, stations.get(i));
+        for (int i = 0; i < stations.length; i++) {
+            Log.d("stations", stations[i]);
+            int diff = checkSoundexDifference(s1, stations[i]);
             if (diff > max) {
                 max = diff;
-                bestMatch = stations.get(i);
+                bestMatch = stations[i];
             }
         }
 
