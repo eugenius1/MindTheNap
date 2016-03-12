@@ -19,20 +19,31 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton record = (FloatingActionButton) findViewById(R.id.record);
+        record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
                 openAudioRecording();
 
+            }
+        });
+
+        FloatingActionButton speech = (FloatingActionButton) findViewById(R.id.speech);
+        speech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSpeechRecognizer();
             }
         });
     }
 
     public void openAudioRecording() {
         Intent intent = new Intent(this, AudioRecordTest.class);
+        startActivity(intent);
+    }
+
+    public void openSpeechRecognizer() {
+        Intent intent = new Intent(this, SpeechInputActivity.class);
         startActivity(intent);
     }
 

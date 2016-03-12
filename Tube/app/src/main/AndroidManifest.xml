@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AudioRecordTest" />
+        <activity android:name=".SpeechInputActivity" />
     </application>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
