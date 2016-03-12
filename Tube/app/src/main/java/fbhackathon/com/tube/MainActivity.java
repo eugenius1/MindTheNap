@@ -58,6 +58,18 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
                                   }
 
         );
+
+        FloatingActionButton speechnew = (FloatingActionButton) findViewById(R.id.speechnew);
+        speechnew.setOnClickListener(new View.OnClickListener()
+
+                                  {
+                                      @Override
+                                      public void onClick(View view) {
+                                          openNewSpeechRecognizer();
+                                      }
+                                  }
+
+        );
     }
 
     private ServiceConnection connection = new ServiceConnection() {
@@ -92,6 +104,11 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
 
     public void openSpeechRecognizer() {
         Intent intent = new Intent(this, SpeechInputActivity.class);
+        startActivity(intent);
+    }
+
+    public void openNewSpeechRecognizer() {
+        Intent intent = new Intent(this, SpeechInputNewActivity.class);
         startActivity(intent);
     }
 

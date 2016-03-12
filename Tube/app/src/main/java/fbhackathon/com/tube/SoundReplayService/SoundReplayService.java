@@ -3,6 +3,7 @@ package fbhackathon.com.tube.SoundReplayService;
 import android.app.IntentService;
 import android.app.Service;
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
@@ -26,7 +27,12 @@ public class SoundReplayService extends IntentService {
 
         MediaPlayer mp = new MediaPlayer();
         try {
-            mp.setDataSource("/sdcard/tubeapp/shotgun.mp3");
+            // InputStream ins = getResources().openRawResource(R.raw.shotgun);
+            // mp.setDataSource("/sdcard/tubeapp/shotgun.mp3");
+            AssetFileDescriptor afd = this.getApplicationContext().getResources().openRawResourceFd(R.raw.shotgun);
+            mp.setDataSource(afd.getFileDescriptor());
+            afd.close();
+            // mp.setDataSource(, R.raw.shotgun);
             mp.prepare();
         }catch(IOException e){
             e.printStackTrace();
