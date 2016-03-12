@@ -1,25 +1,12 @@
 package fbhackathon.com.tube.SoundReplayService;
 
-import android.annotation.TargetApi;
 import android.app.IntentService;
-import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.AssetFileDescriptor;
-import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.Build;
-import android.os.Environment;
-import android.os.IBinder;
 import android.speech.tts.TextToSpeech;
 
-
-import java.io.IOException;
-import java.lang.annotation.Target;
-import java.util.HashMap;
 import java.util.Locale;
-
-import fbhackathon.com.tube.R;
 
 public class SoundReplayService extends IntentService {
     static TextToSpeech tts;

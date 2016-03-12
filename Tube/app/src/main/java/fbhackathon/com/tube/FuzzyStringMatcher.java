@@ -6,11 +6,6 @@ import android.util.Log;
 import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.language.Soundex;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import fbhackathon.com.tube.MapData.Line;
-import fbhackathon.com.tube.MapData.MapMaker;
 import fbhackathon.com.tube.MapData.TubeMap;
 
 /**

@@ -25,9 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MapData.MapMaker" />
+        <activity android:name=".MapMaker" />
         <activity android:name=".AudioRecordTest" />
-        <activity android:name=".SpeechInputActivity" />
         <activity android:name=".SpeechInputNewActivity" />
 
         <service

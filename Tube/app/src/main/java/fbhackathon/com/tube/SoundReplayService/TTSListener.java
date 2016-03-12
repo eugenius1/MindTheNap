@@ -2,8 +2,6 @@ package fbhackathon.com.tube.SoundReplayService;
 
 import android.speech.tts.TextToSpeech;
 
-import java.util.Locale;
-
 /**
  * Created by johannth on 12/03/16.
  */

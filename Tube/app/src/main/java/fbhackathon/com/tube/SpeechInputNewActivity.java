@@ -1,14 +1,12 @@
 package fbhackathon.com.tube;
 
-import java.util.ArrayList;
-
+import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -17,7 +15,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-import fbhackathon.com.tube.MapData.Line;
+import java.util.ArrayList;
+
 import fbhackathon.com.tube.SoundReplayService.SoundReplayService;
 
 /**
