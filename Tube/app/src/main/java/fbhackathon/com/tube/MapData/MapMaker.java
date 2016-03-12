@@ -103,7 +103,7 @@ public class MapMaker extends Activity {
             public void onClick(View v) {
                 if (startStation.equals(endStation)) {
                     // throw new RuntimeException("TODO: Handle this!");
-                    Toast.makeText(MapMaker.this, "Start and stop cannot be the same!", Toast.LENGTH_SHORT);
+                    Toast.makeText(MapMaker.this, "Start and stop station cannot be the same!", Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intent = new Intent(MapMaker.this, OnJourney.class);
                     intent.putExtra("line", line);
