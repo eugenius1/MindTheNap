@@ -1,43 +1,60 @@
 package fbhackathon.com.tube.SoundReplayService;
 
+import android.annotation.TargetApi;
 import android.app.IntentService;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.os.IBinder;
+import android.speech.tts.TextToSpeech;
+
 
 import java.io.IOException;
+import java.lang.annotation.Target;
+import java.util.HashMap;
+import java.util.Locale;
 
 import fbhackathon.com.tube.R;
 
 public class SoundReplayService extends IntentService {
+    static TextToSpeech tts;
+    static Boolean initialized = false;
+    public SoundReplayService(){super("SoundReplayService");}
 
-    public SoundReplayService() {
+    public SoundReplayService(Context c) {
         super("SoundReplayService");
+        try {
+            tts = new TextToSpeech(c, new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int arg0) {
+                    initialized = true;
+                }
+            });
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     @Override
+    //@TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    @SuppressWarnings("deprecation")
     protected void onHandleIntent(Intent workIntent) {
-        // Gets data from the incoming Intent
-        Uri data = workIntent.getData();
-        // Do work here, based on the contents of dataString
-
-        MediaPlayer mp = new MediaPlayer();
-        try {
-            // InputStream ins = getResources().openRawResource(R.raw.shotgun);
-            // mp.setDataSource("/sdcard/tubeapp/shotgun.mp3");
-            AssetFileDescriptor afd = this.getApplicationContext().getResources().openRawResourceFd(R.raw.shotgun);
-            mp.setDataSource(afd.getFileDescriptor());
-            afd.close();
-            // mp.setDataSource(, R.raw.shotgun);
-            mp.prepare();
-        }catch(IOException e){
-            e.printStackTrace();
+        Uri dataString = workIntent.getData();
+        while(!initialized) {
+            try {
+                Thread.sleep(100,0);
+            } catch(Exception e) {
+               e.printStackTrace();
+            }
         }
-        //mp.setLooping(true);
-        mp.start();
+        tts.setLanguage(Locale.UK);
+        tts.speak("Arriving at " + dataString.getLastPathSegment() + " station.", TextToSpeech.QUEUE_FLUSH, null);
     }
 }
