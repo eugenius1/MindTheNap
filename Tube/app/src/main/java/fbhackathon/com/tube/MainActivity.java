@@ -1,15 +1,12 @@
 package fbhackathon.com.tube;
 
-<<<<<<< HEAD
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-=======
-import android.content.Intent;
->>>>>>> andy
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.design.widget.FloatingActionButton;
@@ -20,6 +17,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
 import fbhackathon.com.tube.SoundReplayService.SoundReplayService;
 
 public class MainActivity extends AppCompatActivity implements ServiceCallbacks {
@@ -33,36 +31,36 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-<<<<<<< HEAD
-        // This code should be called to
-        Intent intent = new Intent(this,SoundReplayService.class);
+// This code should be called to
+        Intent intent = new Intent(this, SoundReplayService.class);
         intent.setData(Uri.parse("file://tubeapp/shotgun"));
         this.startService(intent);
 
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-=======
         FloatingActionButton record = (FloatingActionButton) findViewById(R.id.record);
         record.setOnClickListener(new View.OnClickListener() {
->>>>>>> andy
-            @Override
-            public void onClick(View view) {
-                openAudioRecording();
+                                      @Override
+                                      public void onClick(View view) {
+                                          openAudioRecording();
 
-            }
-        });
+                                      }
+                                  }
+
+        );
 
         FloatingActionButton speech = (FloatingActionButton) findViewById(R.id.speech);
-        speech.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSpeechRecognizer();
-            }
-        });
+        speech.setOnClickListener(new View.OnClickListener()
+
+                                  {
+                                      @Override
+                                      public void onClick(View view) {
+                                          openSpeechRecognizer();
+                                      }
+                                  }
+
+        );
     }
-    private ServiceConnection connection = new ServiceConnection(){
+
+    private ServiceConnection connection = new ServiceConnection() {
 
         @Override
         public void onServiceConnected(ComponentName className,
@@ -78,17 +76,13 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
             bound = false;
         }
     };
+
     @Override
     protected void onStart() {
         super.onStart();
         Intent intent = new Intent(this, Accelerometer.class);
         startService(intent);
         bindService(intent, connection, Context.BIND_AUTO_CREATE);
-    }
-
-    public void onAccelerometerValueChange(double magnitude) {
-        TextView textView = (TextView) findViewById(R.id.Magnitude);
-        textView.setText(String.valueOf(magnitude));
     }
 
     public void openAudioRecording() {
@@ -134,6 +128,6 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
 
     @Override
     public void changeText(double magnitude) {
-        onAccelerometerValueChange(magnitude);
+
     }
 }

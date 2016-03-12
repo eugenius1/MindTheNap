@@ -20,7 +20,6 @@
         </activity>
         <activity android:name=".AudioRecordTest" />
         <activity android:name=".SpeechInputActivity" />
-    </application>
     <service
             android:name=".SoundReplayService.SoundReplayService"
             android:exported="false"></service>
