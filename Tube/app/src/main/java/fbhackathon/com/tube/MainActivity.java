@@ -32,6 +32,10 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        // This code should be called to
+        // Intent intent = new Intent(this, SoundReplayService.class);
+        // intent.setData(Uri.parse("file://tubeapp/shotgun"));
+        // this.startService(intent);
 
         FloatingActionButton record = (FloatingActionButton) findViewById(R.id.record);
         record.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +62,6 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
 
         FloatingActionButton speechnew = (FloatingActionButton) findViewById(R.id.speechnew);
         speechnew.setOnClickListener(new View.OnClickListener()
-
                                   {
                                       @Override
                                       public void onClick(View view) {
@@ -87,17 +90,8 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
     public void goToJourneyPlanner() {
         Intent intent = new Intent(this, MapMaker.class);
         startActivity(intent);
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                Intent intent = new Intent (MainActivity.this, MapMaker.class);
-                startActivity(intent);
-            }
-        });
     }
+
     private ServiceConnection connection = new ServiceConnection() {
 
         @Override

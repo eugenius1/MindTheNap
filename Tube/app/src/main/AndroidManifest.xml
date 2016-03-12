@@ -29,7 +29,6 @@
         <activity android:name=".AudioRecordTest" />
         <activity android:name=".SpeechInputActivity" />
         <activity android:name=".SpeechInputNewActivity" />
-
         <service
             android:name=".SoundReplayService.SoundReplayService"
             android:exported="false" />
