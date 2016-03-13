@@ -50,7 +50,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/remaining_stations"
         android:layout_below="@+id/end_station"
-        android:layout_above="@+id/button2"
         android:layout_alignParentEnd="true" />
 
     <Button
@@ -59,5 +58,13 @@
         android:text="Start Your Journey!"
         android:id="@+id/start_journey_button"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset My Position"
+        android:id="@+id/reset_position_button"
+        android:layout_above="@+id/start_journey_button"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

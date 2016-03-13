@@ -1,4 +1,4 @@
-package fbhackathon.com.tube.MapData;
+package fbhackathon.com.tube;
 
 
 import android.app.Activity;
@@ -18,14 +18,14 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
-import fbhackathon.com.tube.OnJourney;
-import fbhackathon.com.tube.R;
+import fbhackathon.com.tube.MapData.Line;
+import fbhackathon.com.tube.MapData.Station;
+import fbhackathon.com.tube.MapData.TubeMap;
 
 public class MapMaker extends Activity {
 

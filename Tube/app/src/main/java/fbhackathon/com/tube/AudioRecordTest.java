@@ -12,17 +12,16 @@ package fbhackathon.com.tube;
  */
 
 import android.app.Activity;
-import android.widget.LinearLayout;
+import android.content.Context;
+import android.media.MediaPlayer;
+import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.content.Context;
-import android.util.Log;
-import android.media.MediaRecorder;
-import android.media.MediaPlayer;
+import android.widget.LinearLayout;
 
 import java.io.IOException;
 
