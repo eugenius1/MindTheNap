@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
         Intent intent = new Intent(this, SoundRecordingExample.class);
         startActivity(intent);
     }
+
 //
 //    public void openSpeechRecognizer() {
 //        Intent intent = new Intent(this, SpeechInputActivity.class);

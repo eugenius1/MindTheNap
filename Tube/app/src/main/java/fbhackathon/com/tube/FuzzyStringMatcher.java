@@ -6,6 +6,8 @@ import android.util.Log;
 import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.language.Soundex;
 
+import java.util.ArrayList;
+
 import fbhackathon.com.tube.MapData.TubeMap;
 
 /**
@@ -42,7 +44,7 @@ public class FuzzyStringMatcher {
         return diff;
     }
 
-    public String findBestMatch(String s1) {
+    public MatchResult findBestStationMatch(String s1) {
         int max = 0;
         String bestMatch = "";
         for (int i = 0; i < stations.length; i++) {
@@ -53,11 +55,45 @@ public class FuzzyStringMatcher {
                 bestMatch = stations[i];
             }
         }
+        MatchResult mr = new MatchResult();
 
         if (max > 2) {
-            return bestMatch;
+            mr.confidence = max;
+            mr.match = bestMatch;
         } else {
-            return "not_found";
+            mr.confidence = 0;
+            mr.match = "";
         }
+        return mr;
+    }
+
+    public String findBestSentenceMatch(ArrayList<String> arr) {
+        MatchResult bestResult = new MatchResult();
+        bestResult.confidence = 0;
+        bestResult.match = "no_result";
+        for(String sentence : arr) {
+            String[] sent = sentence.split("\\s+");
+            for(String word : sent) {
+                MatchResult mr = findBestStationMatch(word.toLowerCase());
+                if(mr.confidence > bestResult.confidence) {
+                     bestResult = mr;
+                }
+            }
+            for(int i = 0; i<sent.length - 1;i++) {
+                String word = sent[i] + " " + sent[i+1];
+                MatchResult mr = findBestStationMatch(word.toLowerCase());
+                if(mr.confidence > bestResult.confidence) {
+                    bestResult = mr;
+                }
+            }
+
+        }
+
+        return bestResult.match;
+    }
+
+    public class MatchResult {
+        String match;
+        int confidence;
     }
 }
