@@ -732,4 +732,1160 @@
 			<name>High Barnet</name>
 		</station>
 	</line>
+	<line>
+		<name>Bakerloo</name>
+		<station>
+			<name>Elephant &amp; Castle</name>
+		</station>
+		<station>
+			<name>Lambeth North</name>
+		</station>
+		<station>
+			<name>Waterloo</name>
+		</station>
+		<station>
+			<name>Embankment</name>
+		</station>
+		<station>
+			<name>Charing Cross</name>
+		</station>
+		<station>
+			<name>Piccadilly Circus</name>
+		</station>
+		<station>
+			<name>Oxford Circus</name>
+		</station>
+		<station>
+			<name>Regent's Park</name>
+		</station>
+		<station>
+			<name>Baker Street</name>
+		</station>
+		<station>
+			<name>Marylebone</name>
+		</station>
+		<station>
+			<name>Edgware Road</name>
+		</station>
+		<station>
+			<name>Paddington</name>
+		</station>
+		<station>
+			<name>Warwick Avenue</name>
+		</station>
+		<station>
+			<name>Maida Vale</name>
+		</station>
+		<station>
+			<name>Kilburn Park</name>
+		</station>
+		<station>
+			<name>Queen&apos;s Park</name>
+		</station>
+		<station>
+			<name>Kensal Green</name>
+		</station>
+		<station>
+			<name>Willesden Junction</name>
+		</station>
+		<station>
+			<name>Harlesden</name>
+		</station>
+		<station>
+			<name>Stonebridge Park</name>
+		</station>
+		<station>
+			<name>Wembley Central</name>
+		</station>
+		<station>
+			<name>North Wembley</name>
+		</station>
+		<station>
+			<name>South Kenton</name>
+		</station>
+		<station>
+			<name>Kenton</name>
+		</station>
+		<station>
+			<name>Harrow &amp; Wealdstone</name>
+		</station>
+	</line>
+	<line>
+		<name>Jubilee</name>
+		<station>
+			<name>Stanmore</name>
+		</station>
+		<station>
+			<name>Canons Park</name>
+		</station>
+		<station>
+			<name>Queensbury</name>
+		</station>
+		<station>
+			<name>Kingsbury</name>
+		</station>
+		<station>
+			<name>Wembley Park</name>
+		</station>
+		<station>
+			<name>Neasden</name>
+		</station>
+		<station>
+			<name>Dollis Hill</name>
+		</station>
+		<station>
+			<name>Willesden Green</name>
+		</station>
+		<station>
+			<name>Kilburn</name>
+		</station>
+		<station>
+			<name>West Hampstead</name>
+		</station>
+		<station>
+			<name>Finchley Road</name>
+		</station>
+		<station>
+			<name>Swiss Cottage</name>
+		</station>
+		<station>
+			<name>St. John&apos;s Wood</name>
+		</station>
+		<station>
+			<name>Baker Street</name>
+		</station>
+		<station>
+			<name>Bond Street</name>
+		</station>
+		<station>
+			<name>Green Park</name>
+		</station>
+		<station>
+			<name>Westminster</name>
+		</station>
+		<station>
+			<name>Waterloo</name>
+		</station>
+		<station>
+			<name>Southward</name>
+		</station>
+		<station>
+			<name>London Bridge</name>
+		</station>
+		<station>
+			<name>Bermondsey</name>
+		</station>
+		<station>
+			<name>Canada Water</name>
+		</station>
+		<station>
+			<name>Canary Wharf</name>
+		</station>
+		<station>
+			<name>North Greenwich</name>
+		</station>
+		<station>
+			<name>Canning Town</name>
+		</station>
+		<station>
+			<name>West Ham</name>
+		</station>
+		<station>
+			<name>Stratford</name>
+		</station>
+	</line>
+	<line>
+		<name>Waterloo &amp; City</name>
+		<station>
+			<name>Waterloo</name>
+		</station>
+		<station>
+			<name>Bank</name>
+		</station>
+	</line>
+	<line>
+		<name>Central (Ealing Broadway - Epping)</name>
+		<station>
+			<name>Ealing Broadway</name>
+		</station>
+		<station>
+			<name>West Acton</name>
+		</station>
+		<station>
+			<name>North Acton</name>
+		</station>
+		<station>
+			<name>East Acton</name>
+		</station>
+		<station>
+			<name>White City</name>
+		</station>
+		<station>
+			<name>Shepherd&apos;s Bush</name>
+		</station>
+		<station>
+			<name>Holland Park</name>
+		</station>
+		<station>
+			<name>Notting Hill Gate</name>
+		</station>
+		<station>
+			<name>Queensway</name>
+		</station>
+		<station>
+			<name>Lancaster Gate</name>
+		</station>
+		<station>
+			<name>Marble Arch</name>
+		</station>
+		<station>
+			<name>Bond Street</name>
+		</station>
+		<station>
+			<name>Oxford Circus</name>
+		</station>
+		<station>
+			<name>Tottenham Court Road</name>
+		</station>
+		<station>
+			<name>Holborn</name>
+		</station>
+		<station>
+			<name>Chancery Lane</name>
+		</station>
+		<station>
+			<name>St. Paul&apos;s</name>
+		</station>
+		<station>
+			<name>Bank</name>
+		</station>
+		<station>
+			<name>Liverpool</name>
+		</station>
+		<station>
+			<name>Bethnal Green</name>
+		</station>
+		<station>
+			<name>Mile End</name>
+		</station>
+		<station>
+			<name>Stratford</name>
+		</station>
+		<station>
+			<name>Leyton</name>
+		</station>
+		<station>
+			<name>Leytonstone</name>
+		</station>
+		<station>
+			<name>Snaresbrook</name>
+		</station>
+		<station>
+			<name>South Woodford</name>
+		</station>
+		<station>
+			<name>Woodford</name>
+		</station>
+		<station>
+			<name>Buckhurst Hill</name>
+		</station>
+		<station>
+			<name>Loughton</name>
+		</station>
+		<station>
+			<name>Debden</name>
+		</station>
+		<station>
+			<name>Theydon Bois</name>
+		</station>
+		<station>
+			<name>Epping</name>
+		</station>
+	</line>	
+	<line>
+		<name>Central (Ealing Broadway - Hainault)</name>
+		<station>
+			<name>Ealing Broadway</name>
+		</station>
+		<station>
+			<name>West Acton</name>
+		</station>
+		<station>
+			<name>North Acton</name>
+		</station>
+		<station>
+			<name>East Acton</name>
+		</station>
+		<station>
+			<name>White City</name>
+		</station>
+		<station>
+			<name>Shepherd&apos;s Bush</name>
+		</station>
+		<station>
+			<name>Holland Park</name>
+		</station>
+		<station>
+			<name>Notting Hill Gate</name>
+		</station>
+		<station>
+			<name>Queensway</name>
+		</station>
+		<station>
+			<name>Lancaster Gate</name>
+		</station>
+		<station>
+			<name>Marble Arch</name>
+		</station>
+		<station>
+			<name>Bond Street</name>
+		</station>
+		<station>
+			<name>Oxford Circus</name>
+		</station>
+		<station>
+			<name>Tottenham Court Road</name>
+		</station>
+		<station>
+			<name>Holborn</name>
+		</station>
+		<station>
+			<name>Chancery Lane</name>
+		</station>
+		<station>
+			<name>St. Paul&apos;s</name>
+		</station>
+		<station>
+			<name>Bank</name>
+		</station>
+		<station>
+			<name>Liverpool</name>
+		</station>
+		<station>
+			<name>Bethnal Green</name>
+		</station>
+		<station>
+			<name>Mile End</name>
+		</station>
+		<station>
+			<name>Stratford</name>
+		</station>
+		<station>
+			<name>Leyton</name>
+		</station>
+		<station>
+			<name>Leytonstone</name>
+		</station>
+		<station>
+			<name>Wanstead</name>
+		</station>
+		<station>
+			<name>Redbridge</name>
+		</station>
+		<station>
+			<name>Gants Hill</name>
+		</station>
+		<station>
+			<name>Newbury Park</name>
+		</station>
+		<station>
+			<name>Barkingside</name>
+		</station>
+		<station>
+			<name>Fairlop</name>
+		</station>
+		<station>
+			<name>Hainault</name>
+		</station>
+	</line>
+	<line>
+		<name>Central (West Ruislip - Epping)</name>
+		<station>
+			<name>West Ruislip</name>
+		</station>
+		<station>
+			<name>Ruislip Gardens</name>
+		</station>
+		<station>
+			<name>South Ruislip</name>
+		</station>
+		<station>
+			<name>Northolt</name>
+		</station>
+		<station>
+			<name>Greenford</name>
+		</station>
+		<station>
+			<name>Perivale</name>
+		</station>
+		<station>
+			<name>Hanger Lane</name>
+		</station>
+		<station>
+			<name>North Acton</name>
+		</station>
+		<station>
+			<name>East Acton</name>
+		</station>
+		<station>
+			<name>White City</name>
+		</station>
+		<station>
+			<name>Shepherd&apos;s Bush</name>
+		</station>
+		<station>
+			<name>Holland Park</name>
+		</station>
+		<station>
+			<name>Notting Hill Gate</name>
+		</station>
+		<station>
+			<name>Queensway</name>
+		</station>
+		<station>
+			<name>Lancaster Gate</name>
+		</station>
+		<station>
+			<name>Marble Arch</name>
+		</station>
+		<station>
+			<name>Bond Street</name>
+		</station>
+		<station>
+			<name>Oxford Circus</name>
+		</station>
+		<station>
+			<name>Tottenham Court Road</name>
+		</station>
+		<station>
+			<name>Holborn</name>
+		</station>
+		<station>
+			<name>Chancery Lane</name>
+		</station>
+		<station>
+			<name>St. Paul&apos;s</name>
+		</station>
+		<station>
+			<name>Bank</name>
+		</station>
+		<station>
+			<name>Liverpool</name>
+		</station>
+		<station>
+			<name>Bethnal Green</name>
+		</station>
+		<station>
+			<name>Mile End</name>
+		</station>
+		<station>
+			<name>Stratford</name>
+		</station>
+		<station>
+			<name>Leyton</name>
+		</station>
+		<station>
+			<name>Leytonstone</name>
+		</station>
+		<station>
+			<name>Snaresbrook</name>
+		</station>
+		<station>
+			<name>South Woodford</name>
+		</station>
+		<station>
+			<name>Woodford</name>
+		</station>
+		<station>
+			<name>Buckhurst Hill</name>
+		</station>
+		<station>
+			<name>Loughton</name>
+		</station>
+		<station>
+			<name>Debden</name>
+		</station>
+		<station>
+			<name>Theydon Bois</name>
+		</station>
+		<station>
+			<name>Epping</name>
+		</station>
+	</line>	
+	<line>
+		<name>Central (West Ruislip - Hainault via Woodford)</name>
+		<station>
+			<name>West Ruislip</name>
+		</station>
+		<station>
+			<name>Ruislip Gardens</name>
+		</station>
+		<station>
+			<name>South Ruislip</name>
+		</station>
+		<station>
+			<name>Northolt</name>
+		</station>
+		<station>
+			<name>Greenford</name>
+		</station>
+		<station>
+			<name>Perivale</name>
+		</station>
+		<station>
+			<name>Hanger Lane</name>
+		</station>
+		<station>
+			<name>North Acton</name>
+		</station>
+		<station>
+			<name>East Acton</name>
+		</station>
+		<station>
+			<name>White City</name>
+		</station>
+		<station>
+			<name>Shepherd&apos;s Bush</name>
+		</station>
+		<station>
+			<name>Holland Park</name>
+		</station>
+		<station>
+			<name>Notting Hill Gate</name>
+		</station>
+		<station>
+			<name>Queensway</name>
+		</station>
+		<station>
+			<name>Lancaster Gate</name>
+		</station>
+		<station>
+			<name>Marble Arch</name>
+		</station>
+		<station>
+			<name>Bond Street</name>
+		</station>
+		<station>
+			<name>Oxford Circus</name>
+		</station>
+		<station>
+			<name>Tottenham Court Road</name>
+		</station>
+		<station>
+			<name>Holborn</name>
+		</station>
+		<station>
+			<name>Chancery Lane</name>
+		</station>
+		<station>
+			<name>St. Paul&apos;s</name>
+		</station>
+		<station>
+			<name>Bank</name>
+		</station>
+		<station>
+			<name>Liverpool</name>
+		</station>
+		<station>
+			<name>Bethnal Green</name>
+		</station>
+		<station>
+			<name>Mile End</name>
+		</station>
+		<station>
+			<name>Stratford</name>
+		</station>
+		<station>
+			<name>Leyton</name>
+		</station>
+		<station>
+			<name>Leytonstone</name>
+		</station>
+		<station>
+			<name>Snaresbrook</name>
+		</station>
+		<station>
+			<name>South Woodford</name>
+		</station>
+		<station>
+			<name>Woodford</name>
+		</station>
+		<station>
+			<name>Roding Valley</name>
+		</station>
+		<station>
+			<name>Chigwell</name>
+		</station>
+		<station>
+			<name>Grange Hill</name>
+		</station>
+		<station>
+			<name>Hainault</name>
+		</station>
+	</line>	
+	<line>
+		<name>Central (West Ruislip - Hainault via Newbury Park)</name>
+		<station>
+			<name>West Ruislip</name>
+		</station>
+		<station>
+			<name>Ruislip Gardens</name>
+		</station>
+		<station>
+			<name>South Ruislip</name>
+		</station>
+		<station>
+			<name>Northolt</name>
+		</station>
+		<station>
+			<name>Greenford</name>
+		</station>
+		<station>
+			<name>Perivale</name>
+		</station>
+		<station>
+			<name>Hanger Lane</name>
+		</station>
+		<station>
+			<name>North Acton</name>
+		</station>
+		<station>
+			<name>East Acton</name>
+		</station>
+		<station>
+			<name>White City</name>
+		</station>
+		<station>
+			<name>Shepherd&apos;s Bush</name>
+		</station>
+		<station>
+			<name>Holland Park</name>
+		</station>
+		<station>
+			<name>Notting Hill Gate</name>
+		</station>
+		<station>
+			<name>Queensway</name>
+		</station>
+		<station>
+			<name>Lancaster Gate</name>
+		</station>
+		<station>
+			<name>Marble Arch</name>
+		</station>
+		<station>
+			<name>Bond Street</name>
+		</station>
+		<station>
+			<name>Oxford Circus</name>
+		</station>
+		<station>
+			<name>Tottenham Court Road</name>
+		</station>
+		<station>
+			<name>Holborn</name>
+		</station>
+		<station>
+			<name>Chancery Lane</name>
+		</station>
+		<station>
+			<name>St. Paul&apos;s</name>
+		</station>
+		<station>
+			<name>Bank</name>
+		</station>
+		<station>
+			<name>Liverpool</name>
+		</station>
+		<station>
+			<name>Bethnal Green</name>
+		</station>
+		<station>
+			<name>Mile End</name>
+		</station>
+		<station>
+			<name>Stratford</name>
+		</station>
+		<station>
+			<name>Leyton</name>
+		</station>
+		<station>
+			<name>Leytonstone</name>
+		</station>
+		<station>
+			<name>Wanstead</name>
+		</station>
+		<station>
+			<name>Redbridge</name>
+		</station>
+		<station>
+			<name>Gants Hill</name>
+		</station>
+		<station>
+			<name>Newbury Park</name>
+		</station>
+		<station>
+			<name>Barkingside</name>
+		</station>
+		<station>
+			<name>Fairlop</name>
+		</station>
+		<station>
+			<name>Hainault</name>
+		</station>
+	</line>
+	<line>
+		<name>Hammersmith &amp; City</name>
+		<station>
+			<name>Hammersmith</name>
+		</station>
+		<station>
+			<name>Goldhawk Road</name>
+		</station>
+		<station>
+			<name>Shepherd&apos;s Bush Market</name>
+		</station>
+		<station>
+			<name>Wood Lane</name>
+		</station>
+		<station>
+			<name>Latimer Road</name>
+		</station>
+		<station>
+			<name>Ladbroke Grove</name>
+		</station>
+		<station>
+			<name>Westbourne Park</name>
+		</station>
+		<station>
+			<name>Royal Oak</name>
+		</station>
+		<station>
+			<name>Paddington</name>
+		</station>
+		<station>
+			<name>Edgware Road</name>
+		</station>
+		<station>
+			<name>Baker Street</name>
+		</station>
+		<station>
+			<name>Great Portland Street</name>
+		</station>
+		<station>
+			<name>Euston Square</name>
+		</station>
+		<station>
+			<name>King&apos;s Cross St. Pancras</name>
+		</station>
+		<station>
+			<name>Farrington</name>
+		</station>
+		<station>
+			<name>Barbican</name>
+		</station>
+		<station>
+			<name>Moorgate</name>
+		</station>
+		<station>
+			<name>Liverpool Street</name>
+		</station>
+		<station>
+			<name>Aldgate East</name>
+		</station>
+		<station>
+			<name>Whitechapel</name>
+		</station>
+		<station>
+			<name>Stepney Green</name>
+		</station>
+		<station>
+			<name>Mile End</name>
+		</station>
+		<station>
+			<name>Bow Road</name>
+		</station>
+		<station>
+			<name>Bromley-by-Bow</name>
+		</station>
+		<station>
+			<name>West Ham</name>
+		</station>
+		<station>
+			<name>Plaistow</name>
+		</station>
+		<station>
+			<name>Upton Park</name>
+		</station>
+		<station>
+			<name>East Ham</name>
+		</station>
+		<station>
+			<name>Barking</name>
+		</station>
+	</line>	
+	<line>
+		<name>Piccadilly (Heathrow Terminal 4 - Cockfosters)</name>
+		<station>
+			<name>Heathrow Terminal 4</name>
+		</station>
+		<station>
+			<name>Heathrow Terminal 1-2-3</name>
+		</station>
+		<station>
+			<name>Hatton Cross</name>
+		</station>
+		<station>
+			<name>Hounslow West</name>
+		</station>
+		<station>
+			<name>Hounslow Central</name>
+		</station>
+		<station>
+			<name>Hounslow East</name>
+		</station>
+		<station>
+			<name>Osterley</name>
+		</station>
+		<station>
+			<name>Boston Manor</name>
+		</station>
+		<station>
+			<name>Northfields</name>
+		</station>
+		<station>
+			<name>South Ealing</name>
+		</station>
+		<station>
+			<name>Acton Town</name>
+		</station>
+		<station>
+			<name>Turnham Green</name>
+		</station>
+		<station>
+			<name>Hammersmith</name>
+		</station>
+		<station>
+			<name>Barons Court</name>
+		</station>
+		<station>
+			<name>Earl&apos;s Court</name>
+		</station>
+		<station>
+			<name>Gloucester Road</name>
+		</station>
+		<station>
+			<name>South Kensington</name>
+		</station>
+		<station>
+			<name>Knightsbridge</name>
+		</station>
+		<station>
+			<name>Hyde Park Corner</name>
+		</station>
+		<station>
+			<name>Green Park</name>
+		</station>
+		<station>
+			<name>Piccadilly Circus</name>
+		</station>
+		<station>
+			<name>Leicester Square</name>
+		</station>
+		<station>
+			<name>Covent Garden</name>
+		</station>
+		<station>
+			<name>Holborn</name>
+		</station>
+		<station>
+			<name>Russell Square/name>
+		</station>
+		<station>
+			<name>King&apos;s Cross St. Pancras</name>
+		</station>
+		<station>
+			<name>Caledonian Road</name>
+		</station>
+		<station>
+			<name>Holloway Road</name>
+		</station>
+		<station>
+			<name>Arsenal</name>
+		</station>
+		<station>
+			<name>Finsbury Park</name>
+		</station>
+		<station>
+			<name>Manor House</name>
+		</station>
+		<station>
+			<name>Turnpike Lane</name>
+		</station>
+		<station>
+			<name>Wood Green</name>
+		</station>
+		<station>
+			<name>Bounds Green</name>
+		</station>
+		<station>
+			<name>Arnos Grove</name>
+		</station>
+		<station>
+			<name>Southgate</name>
+		</station>
+		<station>
+			<name>Oakwood</name>
+		</station>
+		<station>
+			<name>Cockfosters</name>
+		</station>
+	</line>
+	<line>
+		<name>Piccadilly (Heathrow Terminal 5 - Cockfosters)</name>
+		<station>
+			<name>Heathrow Terminal 5</name>
+		</station>
+		<station>
+			<name>Heathrow Terminal 1-2-3</name>
+		</station>
+		<station>
+			<name>Hatton Cross</name>
+		</station>
+		<station>
+			<name>Hounslow West</name>
+		</station>
+		<station>
+			<name>Hounslow Central</name>
+		</station>
+		<station>
+			<name>Hounslow East</name>
+		</station>
+		<station>
+			<name>Osterley</name>
+		</station>
+		<station>
+			<name>Boston Manor</name>
+		</station>
+		<station>
+			<name>Northfields</name>
+		</station>
+		<station>
+			<name>South Ealing</name>
+		</station>
+		<station>
+			<name>Acton Town</name>
+		</station>
+		<station>
+			<name>Turnham Green</name>
+		</station>
+		<station>
+			<name>Hammersmith</name>
+		</station>
+		<station>
+			<name>Barons Court</name>
+		</station>
+		<station>
+			<name>Earl&apos;s Court</name>
+		</station>
+		<station>
+			<name>Gloucester Road</name>
+		</station>
+		<station>
+			<name>South Kensington</name>
+		</station>
+		<station>
+			<name>Knightsbridge</name>
+		</station>
+		<station>
+			<name>Hyde Park Corner</name>
+		</station>
+		<station>
+			<name>Green Park</name>
+		</station>
+		<station>
+			<name>Piccadilly Circus</name>
+		</station>
+		<station>
+			<name>Leicester Square</name>
+		</station>
+		<station>
+			<name>Covent Garden</name>
+		</station>
+		<station>
+			<name>Holborn</name>
+		</station>
+		<station>
+			<name>Russell Square/name>
+		</station>
+		<station>
+			<name>King&apos;s Cross St. Pancras</name>
+		</station>
+		<station>
+			<name>Caledonian Road</name>
+		</station>
+		<station>
+			<name>Holloway Road</name>
+		</station>
+		<station>
+			<name>Arsenal</name>
+		</station>
+		<station>
+			<name>Finsbury Park</name>
+		</station>
+		<station>
+			<name>Manor House</name>
+		</station>
+		<station>
+			<name>Turnpike Lane</name>
+		</station>
+		<station>
+			<name>Wood Green</name>
+		</station>
+		<station>
+			<name>Bounds Green</name>
+		</station>
+		<station>
+			<name>Arnos Grove</name>
+		</station>
+		<station>
+			<name>Southgate</name>
+		</station>
+		<station>
+			<name>Oakwood</name>
+		</station>
+		<station>
+			<name>Cockfosters</name>
+		</station>
+	</line>
+	<line>
+		<name>Piccadilly (Uxbridge - Cockfosters)</name>
+		<station>
+			<name>Uxbridge</name>
+		</station>
+		<station>
+			<name>Hillingdon</name>
+		</station>
+		<station>
+			<name>Ickenham</name>
+		</station>
+		<station>
+			<name>Ruislip</name>
+		</station>		
+		<station>
+			<name>Ruislip Manor</name>
+		</station>
+		<station>
+			<name>Eastcote</name>
+		</station>
+		<station>
+			<name>Rayners Lane</name>
+		</station>
+		<station>
+			<name>South Harrow</name>
+		</station>
+		<station>
+			<name>Sudbury Hill</name>
+		</station>
+		<station>
+			<name>Sudbury Town</name>
+		</station>
+		<station>
+			<name>Alperton</name>
+		</station>
+		<station>
+			<name>Park Royal</name>
+		</station>
+		<station>
+			<name>North Ealing</name>
+		</station>
+		<station>
+			<name>Ealing Common</name>
+		</station>
+
+		<station>
+			<name>Acton Town</name>
+		</station>
+		<station>
+			<name>Turnham Green</name>
+		</station>
+		<station>
+			<name>Hammersmith</name>
+		</station>
+		<station>
+			<name>Barons Court</name>
+		</station>
+		<station>
+			<name>Earl&apos;s Court</name>
+		</station>
+		<station>
+			<name>Gloucester Road</name>
+		</station>
+		<station>
+			<name>South Kensington</name>
+		</station>
+		<station>
+			<name>Knightsbridge</name>
+		</station>
+		<station>
+			<name>Hyde Park Corner</name>
+		</station>
+		<station>
+			<name>Green Park</name>
+		</station>
+		<station>
+			<name>Piccadilly Circus</name>
+		</station>
+		<station>
+			<name>Leicester Square</name>
+		</station>
+		<station>
+			<name>Covent Garden</name>
+		</station>
+		<station>
+			<name>Holborn</name>
+		</station>
+		<station>
+			<name>Russell Square/name>
+		</station>
+		<station>
+			<name>King&apos;s Cross St. Pancras</name>
+		</station>
+		<station>
+			<name>Caledonian Road</name>
+		</station>
+		<station>
+			<name>Holloway Road</name>
+		</station>
+		<station>
+			<name>Arsenal</name>
+		</station>
+		<station>
+			<name>Finsbury Park</name>
+		</station>
+		<station>
+			<name>Manor House</name>
+		</station>
+		<station>
+			<name>Turnpike Lane</name>
+		</station>
+		<station>
+			<name>Wood Green</name>
+		</station>
+		<station>
+			<name>Bounds Green</name>
+		</station>
+		<station>
+			<name>Arnos Grove</name>
+		</station>
+		<station>
+			<name>Southgate</name>
+		</station>
+		<station>
+			<name>Oakwood</name>
+		</station>
+		<station>
+			<name>Cockfosters</name>
+		</station>
+	</line>
 </tubeMap>
