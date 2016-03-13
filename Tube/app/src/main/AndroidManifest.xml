@@ -38,6 +38,7 @@
             android:exported="true" />
 
         <activity android:name=".OnJourney"></activity>
+        <activity android:name=".SoundRecordingExample"></activity>
     </application>
 
     <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
