@@ -119,7 +119,7 @@ public class SpeechInputNewActivity extends Activity implements
         // returnedText.setText(errorMessage);
         toggleButton.setChecked(false);
         Intent returnIntent = new Intent();
-        returnIntent.putExtra("result","Not found.");
+        returnIntent.putExtra("result", "Not found.");
         setResult(Activity.RESULT_CANCELED, returnIntent);
         finish();
     }
@@ -156,9 +156,20 @@ public class SpeechInputNewActivity extends Activity implements
             intent.setData(Uri.parse("file://tubeapp/" + bestMatch));
             this.startService(intent);
             text += "match: " + bestMatch + "\n";
-            Intent returnIntent = new Intent();
-            returnIntent.putExtra("result", bestMatch);
-            setResult(Activity.RESULT_OK, returnIntent);
+            String spokenText = "";
+            if(bestMatch.equals(stops[stops.length - 1])) {
+                Intent returnIntent = new Intent();
+                spokenText = "This is " +  bestMatch + ", Get Out!";
+                returnIntent.putExtra("result", spokenText);
+                returnIntent.putExtra("stationName", bestMatch);
+                setResult(Activity.RESULT_OK, returnIntent);
+            } else if(bestMatch.equals(stops[stops.length - 2])) {
+                Intent returnIntent = new Intent();
+                spokenText = "This is " + bestMatch + ", your stop is next.";
+                returnIntent.putExtra("result", spokenText);
+                returnIntent.putExtra("stationName", bestMatch);
+                setResult(Activity.RESULT_OK, returnIntent);
+            }
             finish();
         } else {
             Intent returnIntent = new Intent();

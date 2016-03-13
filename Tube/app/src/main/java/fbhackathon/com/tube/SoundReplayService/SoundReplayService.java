@@ -42,6 +42,6 @@ public class SoundReplayService extends IntentService {
             }
         }
         tts.setLanguage(Locale.UK);
-        tts.speak("Arriving at " + dataString.getLastPathSegment() + " station.", TextToSpeech.QUEUE_FLUSH, null);
+        tts.speak(dataString.getLastPathSegment(), TextToSpeech.QUEUE_FLUSH, null);
     }
 }

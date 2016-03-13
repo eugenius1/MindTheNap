@@ -1,9 +1,11 @@
 package fbhackathon.com.tube;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -14,9 +16,11 @@ import android.os.Handler;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import fbhackathon.com.tube.MapData.Line;
 import fbhackathon.com.tube.MapData.Station;
+import fbhackathon.com.tube.SoundReplayService.SoundReplayService;
 
 public class OnJourney extends AppCompatActivity {
 
@@ -94,9 +98,14 @@ public class OnJourney extends AppCompatActivity {
         } else if (requestCode == 0) {
             // Make sure the request was successful
             if (resultCode == RESULT_OK) {
-                String resultString = data.getStringExtra("result");
+                String resultString = data.getStringExtra("stationName");
                 jumpToStation(resultString);
-                if (!resultString.equals(stopsArr[stopsArr.length-1])) {
+                String spokenText = data.getStringExtra("result");
+                Log.d("SpokenText", spokenText);
+                Intent tts = new Intent(this, SoundReplayService.class);
+                tts.setData(Uri.parse("file://tubeApp/" + spokenText));
+                startService(tts);
+                if (!resultString.equals(destination.getName())) {
                     mHandler.postDelayed(new Runnable() {
                         public void run() {
                             callSpeechRecognition();
@@ -104,7 +113,7 @@ public class OnJourney extends AppCompatActivity {
                     }, 3000);
                 }
             } else {
-                currentTextView.setText("N/A");
+                //currentTextView.setText("N/A");
                 mHandler.postDelayed(new Runnable() {
                     public void run() {
                         callSpeechRecognition();
@@ -148,7 +157,11 @@ public class OnJourney extends AppCompatActivity {
     }
 
     private void updateCurrentStation(String stationName) {
-        current = line.findStation(stationName);
+        try {
+            current = line.findStation(stationName);
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
+        }
         currentTextView.setText(current.getName());
     }
 
