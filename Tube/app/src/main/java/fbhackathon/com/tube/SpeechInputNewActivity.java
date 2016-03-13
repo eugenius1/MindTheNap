@@ -169,6 +169,10 @@ public class SpeechInputNewActivity extends Activity implements
                 returnIntent.putExtra("result", spokenText);
                 returnIntent.putExtra("stationName", bestMatch);
                 setResult(Activity.RESULT_OK, returnIntent);
+            } else {
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("stationName", bestMatch);
+                setResult(Activity.RESULT_OK, returnIntent);
             }
             finish();
         } else {

@@ -100,11 +100,13 @@ public class OnJourney extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 String resultString = data.getStringExtra("stationName");
                 jumpToStation(resultString);
-                String spokenText = data.getStringExtra("result");
-                Log.d("SpokenText", spokenText);
-                Intent tts = new Intent(this, SoundReplayService.class);
-                tts.setData(Uri.parse("file://tubeApp/" + spokenText));
-                startService(tts);
+                if (data.hasExtra("result")) {
+                    String spokenText = data.getStringExtra("result");
+                    Log.d("SpokenText", spokenText);
+                    Intent tts = new Intent(this, SoundReplayService.class);
+                    tts.setData(Uri.parse("file://tubeApp/" + spokenText));
+                    startService(tts);
+                }
                 if (!resultString.equals(destination.getName())) {
                     mHandler.postDelayed(new Runnable() {
                         public void run() {
