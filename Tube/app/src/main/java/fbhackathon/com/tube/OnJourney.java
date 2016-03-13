@@ -2,6 +2,7 @@ package fbhackathon.com.tube;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.Handler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,13 +25,16 @@ public class OnJourney extends AppCompatActivity {
     private Line line;
     private TextView currentTextView;
     private TextView destinationTextView;
+    private TextView youAreNowAt;
     private ListView stopsListView;
     private Button startJourneyButton;
     private Button resetPositionButton;
     private boolean direction;
     private List<String> stops = new ArrayList<>();
+    String[] stopsArr;
     private List<String> remainingStops = new ArrayList<>();
     private static final int REQUEST_CODE = 1;
+    private Handler mHandler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,7 @@ public class OnJourney extends AppCompatActivity {
         destination = (Station) getIntent().getSerializableExtra("end");
         currentTextView = (TextView) findViewById(R.id.current_station);
         destinationTextView = (TextView) findViewById(R.id.end_station);
+        youAreNowAt = (TextView) findViewById(R.id.textView4);
         stopsListView = (ListView) findViewById(R.id.remaining_stations);
         startJourneyButton = (Button) findViewById(R.id.start_journey_button);
         resetPositionButton = (Button) findViewById(R.id.reset_position_button);
@@ -51,10 +57,13 @@ public class OnJourney extends AppCompatActivity {
         startJourneyButton.setOnClickListener(new View.OnClickListener() {
                                                   @Override
                                                   public void onClick(View view) {
-                                                      Intent intent = new Intent(OnJourney.this, SpeechInputNewActivity.class);
-                                                      String[] stopsArr = stops.toArray(new String[stops.size()]);
-                                                      intent.putExtra("stops", stopsArr);
-                                                      startActivity(intent);
+//                                                      Intent intent = new Intent(OnJourney.this, ProgressPageActivity.class);
+//                                                      String[] stopsArr = stops.toArray(new String[stops.size()]);
+//                                                      intent.putExtra("stops", stopsArr);
+//                                                      startActivity(intent);
+                                                      startJourneyButton.setVisibility(View.INVISIBLE);
+                                                      resetPositionButton.setVisibility(View.INVISIBLE);
+                                                      callSpeechRecognition();
                                                   }
                                               }
         );
@@ -68,18 +77,49 @@ public class OnJourney extends AppCompatActivity {
         });
     }
 
+    private void callSpeechRecognition() {
+        stopsArr = new String[stops.size()];
+        stopsArr = stops.toArray(stopsArr);
+        Intent intent = new Intent(OnJourney.this, SpeechInputNewActivity.class);
+        intent.putExtra("stops", stopsArr);
+        startActivityForResult(intent, 0);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null) {
             String newStation = data.getStringExtra("newStation");
             resetCurrentStation(newStation);
+        } else if (requestCode == 0) {
+            // Make sure the request was successful
+            if (resultCode == RESULT_OK) {
+                String resultString = data.getStringExtra("result");
+                jumpToStation(resultString);
+                if (!resultString.equals(stopsArr[stopsArr.length-1])) {
+                    mHandler.postDelayed(new Runnable() {
+                        public void run() {
+                            callSpeechRecognition();
+                        }
+                    }, 3000);
+                }
+            } else {
+                currentTextView.setText("N/A");
+                mHandler.postDelayed(new Runnable() {
+                    public void run() {
+                        callSpeechRecognition();
+                    }
+                }, 3000);
+            }
         }
     }
 
     public void jumpToStation(String stationName) {
         if (stationName.equals(destination.getName())) {
             // TODO: tell the user to get off
+            currentTextView.setText("You've arrived at");
+            stopsListView.setVisibility(View.INVISIBLE);
+            youAreNowAt.setVisibility(View.INVISIBLE);
             return;
         }
         for (int i = 0; i < remainingStops.size(); i++) {
