@@ -138,24 +138,24 @@ public class SpeechInputNewActivity extends Activity implements
         ArrayList<String> matches = results
                 .getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
         String text = "";
-        for (String result : matches) {
 
-            System.out.println("tubeapp: split = " + result.toLowerCase());
-            FuzzyStringMatcher fuzzyMatcher = new FuzzyStringMatcher(this.getApplicationContext(), stops);
-            String bestMatch = fuzzyMatcher.findBestMatch(result.toLowerCase());
-            // if (stationMap.get(splitText[i].toLowerCase())!=null) {
-            if (!bestMatch.equals("not_found")) {
-                System.out.println("tubeapp: found in map");
-                Intent intent = new Intent(this, SoundReplayService.class);
-                intent.setData(Uri.parse("file://tubeapp/shotgun.mp3"));
-                this.startService(intent);
-                text += "match: " + result + ":" + bestMatch + "\n";
-            } else {
-                text += result + "\n";
-            }
+        //System.out.println("tubeapp: split = " + result.toLowerCase());
+        FuzzyStringMatcher fuzzyMatcher = new FuzzyStringMatcher(this.getApplicationContext(), stops);
+        String bestMatch = fuzzyMatcher.findBestSentenceMatch(matches);
+        // if (stationMap.get(splitText[i].toLowerCase())!=null) {
+        if (!bestMatch.equals("not_found")) {
+            System.out.println("tubeapp: found in map");
+            Intent intent = new Intent(this, SoundReplayService.class);
+            intent.setData(Uri.parse("file://tubeapp/" + bestMatch));
+            this.startService(intent);
+            text += "match: " + bestMatch + "\n";
+        } else {
+            //text += result + "\n";
         }
 
+
         returnedText.setText(text);
+        speech.startListening(recognizerIntent);
     }
 
     @Override

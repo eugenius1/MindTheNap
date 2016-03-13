@@ -51,7 +51,7 @@ public class OnJourney extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(OnJourney.this, SpeechInputNewActivity.class);
-                String[] stopsArr = (String[]) stops.toArray();
+                String[] stopsArr = stops.toArray(new String[stops.size()]);
                 intent.putExtra("stops", stopsArr);
                 startActivity(intent);
             }

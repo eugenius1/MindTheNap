@@ -259,7 +259,7 @@
 		</station>
 	</line>
 	<line>
-		<name> Northern (Morden - Mill Hill East via Bank)</name>
+		<name>Northern (Morden - Mill Hill East via Bank)</name>
 		<station>
 			<name>Morden</name>
 		</station>
@@ -349,7 +349,7 @@
 		</station>
 	</line>
 	<line>
-		<name> Northern (Morden - High Barnet via Bank)</name>
+		<name>Northern (Morden - High Barnet via Bank)</name>
 		<station>
 			<name>Morden</name>
 		</station>
@@ -544,7 +544,7 @@
 		</station>
 	</line>
 	<line>
-		<name> Northern (Morden - Mill Hill East via Charing Cross)</name>
+		<name>Northern (Morden - Mill Hill East via Charing Cross)</name>
 		<station>
 			<name>Morden</name>
 		</station>
@@ -634,7 +634,7 @@
 		</station>
 	</line>
 	<line>
-		<name> Northern (Morden - High Barnet via Charring Cross)</name>
+		<name>Northern (Morden - High Barnet via Charing Cross)</name>
 		<station>
 			<name>Morden</name>
 		</station>
@@ -732,5 +732,4 @@
 			<name>High Barnet</name>
 		</station>
 	</line>
-
 </tubeMap>
