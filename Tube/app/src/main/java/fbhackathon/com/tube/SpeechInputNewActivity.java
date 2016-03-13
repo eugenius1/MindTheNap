@@ -55,8 +55,11 @@ public class SpeechInputNewActivity extends Activity implements
 
         // get the stops
         stops = getIntent().getExtras().getStringArray("stops");
+        progressBar.setVisibility(View.VISIBLE);
+        progressBar.setIndeterminate(true);
+        speech.startListening(recognizerIntent);
 
-        toggleButton.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        /*toggleButton.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
@@ -71,7 +74,7 @@ public class SpeechInputNewActivity extends Activity implements
                     speech.stopListening();
                 }
             }
-        });
+        });*/
 
     }
 
@@ -113,8 +116,12 @@ public class SpeechInputNewActivity extends Activity implements
     public void onError(int errorCode) {
         String errorMessage = getErrorText(errorCode);
         Log.d(LOG_TAG, "FAILED " + errorMessage);
-        returnedText.setText(errorMessage);
+        // returnedText.setText(errorMessage);
         toggleButton.setChecked(false);
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra("result","Not found.");
+        setResult(Activity.RESULT_CANCELED, returnIntent);
+        finish();
     }
 
     @Override
@@ -149,13 +156,20 @@ public class SpeechInputNewActivity extends Activity implements
             intent.setData(Uri.parse("file://tubeapp/" + bestMatch));
             this.startService(intent);
             text += "match: " + bestMatch + "\n";
+            Intent returnIntent = new Intent();
+            returnIntent.putExtra("result", bestMatch);
+            setResult(Activity.RESULT_OK, returnIntent);
+            finish();
         } else {
-            //text += result + "\n";
+            Intent returnIntent = new Intent();
+            returnIntent.putExtra("result","Not found.");
+            setResult(Activity.RESULT_CANCELED,returnIntent);
+            finish();
         }
 
 
         returnedText.setText(text);
-        speech.startListening(recognizerIntent);
+        // speech.startListening(recognizerIntent);
     }
 
     @Override
@@ -170,9 +184,9 @@ public class SpeechInputNewActivity extends Activity implements
             case SpeechRecognizer.ERROR_AUDIO:
                 message = "Audio recording error";
                 break;
-            case SpeechRecognizer.ERROR_CLIENT:
-                message = "Client side error";
-                break;
+            //case SpeechRecognizer.ERROR_CLIENT:
+            //    message = "Client side error";
+            //    break;
             case SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS:
                 message = "Insufficient permissions";
                 break;

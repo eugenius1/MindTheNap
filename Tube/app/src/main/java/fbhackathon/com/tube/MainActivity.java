@@ -37,16 +37,16 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
         // intent.setData(Uri.parse("file://tubeapp/shotgun"));
         // this.startService(intent);
 
-        FloatingActionButton record = (FloatingActionButton) findViewById(R.id.record);
-        record.setOnClickListener(new View.OnClickListener() {
-                                      @Override
-                                      public void onClick(View view) {
-                                          openAudioRecording();
-
-                                      }
-                                  }
-
-        );
+//        FloatingActionButton record = (FloatingActionButton) findViewById(R.id.record);
+//        record.setOnClickListener(new View.OnClickListener() {
+//                                      @Override
+//                                      public void onClick(View view) {
+//                                          openAudioRecording();
+//
+//                                      }
+//                                  }
+//
+//        );
 
         /*FloatingActionButton speech = (FloatingActionButton) findViewById(R.id.speech);
         speech.setOnClickListener(new View.OnClickListener()
@@ -60,17 +60,17 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
 
         );*/
 
-        FloatingActionButton speechnew = (FloatingActionButton) findViewById(R.id.speechnew);
-        speechnew.setOnClickListener(new View.OnClickListener()
-
-                                  {
-                                      @Override
-                                      public void onClick(View view) {
-                                          openNewSpeechRecognizer();
-                                      }
-                                  }
-
-        );
+//        FloatingActionButton speechnew = (FloatingActionButton) findViewById(R.id.speechnew);
+//        speechnew.setOnClickListener(new View.OnClickListener()
+//
+//                                  {
+//                                      @Override
+//                                      public void onClick(View view) {
+//                                          openNewSpeechRecognizer();
+//                                      }
+//                                  }
+//
+//        );
 
 
         FloatingActionButton mapButton = (FloatingActionButton) findViewById(R.id.mapButton);

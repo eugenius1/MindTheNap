@@ -70,7 +70,7 @@ public class FuzzyStringMatcher {
     public String findBestSentenceMatch(ArrayList<String> arr) {
         MatchResult bestResult = new MatchResult();
         bestResult.confidence = 0;
-        bestResult.match = "no_result";
+        bestResult.match = "not_found";
         for(String sentence : arr) {
             String[] sent = sentence.split("\\s+");
             for(String word : sent) {
