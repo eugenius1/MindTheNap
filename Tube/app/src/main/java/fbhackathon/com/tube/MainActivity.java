@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements ServiceCallbacks 
         Intent intent = new Intent(this, MapMaker.class);
         startActivity(intent);
     }
+
     private ServiceConnection connection = new ServiceConnection() {
 
         @Override
