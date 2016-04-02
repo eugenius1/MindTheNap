@@ -24,5 +24,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
-    compile files('/Development/FBHackathon/FacebookHack16/Tube/libs/commons-codec-1.10.jar')
+    //compile files('/Development/FBHackathon/FacebookHack16/Tube/libs/commons-codec-1.10.jar')
+    compile files('/home/eugenius/Android/apps/MindTheNap/Tube/libs/commons-codec-1.10.jar')
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
